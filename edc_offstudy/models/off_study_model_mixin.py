@@ -57,7 +57,7 @@ class OffStudyModelMixin(models.Model):
         return (self.offstudy_date, ) + self.registered_subject.natural_key()
 
     def __str__(self):
-        return "{0} {1} ({2})".format(
+        return "{0} {1}".format(
             self.registered_subject.subject_identifier,
             self.registered_subject.subject_type)
             #mask_encrypted(self.registered_subject.first_name))
